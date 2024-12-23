@@ -44,9 +44,11 @@ Additionally, include a date table.
 There are several tools online you can use, I'd recommend [Draw.io](https://www.drawio.com/) or [LucidChart](https://www.lucidchart.com/pages/).
 
 **HINT:** You do not need to create any data for this prompt. This is a conceptual model only. 
+![alt text](logical-data-model-diagram-assignment-2.png)
 
 #### Prompt 2
 We want to create employee shifts, splitting up the day into morning and evening. Add this to the ERD.
+![alt text](logical-data-model-diagram-assignment-2-p2.png)
 
 #### Prompt 3
 The store wants to keep customer addresses. Propose two architectures for the CUSTOMER_ADDRESS table, one that will retain changes, and another that will overwrite. Which is type 1, which is type 2? 
@@ -55,6 +57,33 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 ```
 Your answer...
+
+CUSTOMER_ADDRESS table that reains changes - Type 2 slowly changing dimentions
+===
+customer_address_id
+customer_id
+customer_address_line1
+customer_address_line2
+customer_address_city
+customer_address_porvince
+customer_address_postalcode
+customer_address_country
+customer_address_startdate
+customer_address_enddate
+
+
+CUSTOMER_ADDRESS table that overwrits changes - Type 1 slowly changing dimentions
+===
+customer_id
+customer_address_line1
+customer_address_line2
+customer_address_city
+customer_address_porvince
+customer_address_postalcode
+customer_address_country
+
+
+
 ```
 
 ***
